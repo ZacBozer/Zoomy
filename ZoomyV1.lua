@@ -1,4 +1,3 @@
-wait(3)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
@@ -7,7 +6,7 @@ local ImageLabel = Instance.new("ImageLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.Name = "stop skidding"
+ScreenGui.Name = "bruh"
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -23,7 +22,7 @@ ImageLabel.Size = UDim2.new(0, 256, 0, 256)
 ImageLabel.Image = "rbxassetid://4867025044"
 ImageLabel.Position = UDim2.new(0, -128, 0, -128)
 ImageLabel.ImageTransparency = 0
-
+wait(3)
 while true do
 	ImageLabel.ImageTransparency = (ImageLabel.ImageTransparency) + 0.025
 	if ImageLabel.ImageTransparency == 1 then
@@ -32,8 +31,6 @@ while true do
 	end
 wait(0.05)
 end
-
-print(Zoomy V1.10 by ZacBozer on GitHub)
 
 local AccessUI = Instance.new("ScreenGui")
 local yes = Instance.new("Frame")
