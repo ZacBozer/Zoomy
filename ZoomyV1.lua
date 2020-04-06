@@ -1,3 +1,4 @@
+wait(3)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
@@ -6,7 +7,7 @@ local ImageLabel = Instance.new("ImageLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.Name = "bruh"
+ScreenGui.Name = "stop skidding"
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -32,6 +33,8 @@ while true do
 wait(0.05)
 end
 
+print(Zoomy V1.10 by ZacBozer on GitHub)
+
 local AccessUI = Instance.new("ScreenGui")
 local yes = Instance.new("Frame")
 local Frameeya = Instance.new("Frame")
@@ -50,6 +53,7 @@ local infiniteyield = Instance.new("TextButton")
 local jojoscript = Instance.new("TextButton")
 local aimbot = Instance.new("TextButton")
 local FathomHub = Instance.new("TextButton")
+local FEanimations = Instance.new("TextButton")
 
 --Properties:
 
@@ -10483,4 +10487,19 @@ FathomHub.TextScaled = true
 FathomHub.TextWrapped = true
 FathomHub.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+end)
+
+FEanimations.Name = "FE Animations"
+FEanimations.Parent = ScrollingFrame
+FEanimations.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FEanimations.BorderSizePixel = 0
+FEanimations.Position = UDim2.new(0, 0, 0, 350)
+FEanimations.Size = UDim2.new(0, 188, 0, 53)
+FEanimations.Font = Enum.Font.SourceSans
+FEanimations.Text = "FE Animations"
+FEanimations.TextColor3 = Color3.fromRGB(0, 0, 0)
+FEanimations.TextScaled = true
+FEanimations.TextWrapped = true
+FEanimations.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/kz1Et0kG'),true))()
 end)
