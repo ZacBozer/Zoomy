@@ -1,4 +1,37 @@
-print("Zoomy GUI V1.01 by ZacBozer on GitHub")
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "bruh"
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 256, 0, 256)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(0, 256, 0, 256)
+ImageLabel.Image = "rbxassetid://4867025044"
+ImageLabel.Position = UDim2.new(0, -128, 0, -128)
+ImageLabel.ImageTransparency = 0
+
+while true do
+	ImageLabel.ImageTransparency = (ImageLabel.ImageTransparency) + 0.025
+	if ImageLabel.ImageTransparency == 1 then
+		ScreenGui:Destroy()
+		break
+	end
+wait(0.05)
+end
+
 local AccessUI = Instance.new("ScreenGui")
 local yes = Instance.new("Frame")
 local Frameeya = Instance.new("Frame")
@@ -31,7 +64,7 @@ yes.Active = true
 yes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 yes.BorderColor3 = Color3.fromRGB(54, 54, 54)
 yes.BorderSizePixel = 4
-yes.Position = UDim2.new(0.249, 44, -0.144, 322)
+yes.Position = UDim2.new(0.5, -97, 0.5, -207.5)
 yes.Selectable = true
 yes.Size = UDim2.new(0, 194, 0, 215)
 local UserInputService = game:GetService("UserInputService")
