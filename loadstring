@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ZacBozer/Zoomy/master/YES%20V.2.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ZacBozer/Zoomy/master/ZoomyV1.lua'))()
