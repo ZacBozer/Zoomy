@@ -6,7 +6,7 @@ local ImageLabel = Instance.new("ImageLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.Name = "bruh"
+ScreenGui.Name = "stop skidding"
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -23,6 +23,7 @@ ImageLabel.Image = "rbxassetid://4867025044"
 ImageLabel.Position = UDim2.new(0, -128, 0, -128)
 ImageLabel.ImageTransparency = 0
 wait(3)
+
 while true do
 	ImageLabel.ImageTransparency = (ImageLabel.ImageTransparency) + 0.025
 	if ImageLabel.ImageTransparency == 1 then
