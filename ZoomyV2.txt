@@ -1,0 +1,452 @@
+local YES = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local bruh = Instance.new("ImageLabel")
+
+--Properties:
+
+YES.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+YES.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+YES.Name = "stop skidding"
+
+Frame.Parent = YES
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 256, 0, 256)
+
+bruh.Parent = Frame
+bruh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bruh.BackgroundTransparency = 1.000
+bruh.Size = UDim2.new(0, 256, 0, 256)
+bruh.Image = "rbxassetid://4867025044"
+bruh.Position = UDim2.new(0, -128, 0, -128)
+bruh.ImageTransparency = 0
+wait(3)
+
+while true do
+	bruh.ImageTransparency = (bruh.ImageTransparency) + 0.025
+	if bruh.ImageTransparency == 1 then
+		YES:Destroy()
+		break
+	end
+wait(0.05)
+end
+
+print[[
+Zoomy GUI
+Version:2.1.1
+Made by ZacBozer on GitHub
+]]
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("ImageLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local _1 = Instance.new("ImageLabel")
+local FEHAX = Instance.new("TextButton")
+local _2 = Instance.new("ImageLabel")
+local BestGUI = Instance.new("TextButton")
+local _4 = Instance.new("ImageLabel")
+local PotatoHub = Instance.new("TextButton")
+local _3 = Instance.new("ImageLabel")
+local InfiniteYield = Instance.new("TextButton")
+local _5 = Instance.new("ImageLabel")
+local AimBot = Instance.new("TextButton")
+local _6 = Instance.new("ImageLabel")
+local FathomHub = Instance.new("TextButton")
+local _7 = Instance.new("ImageLabel")
+local FEAnimations = Instance.new("TextButton")
+local _8 = Instance.new("ImageLabel")
+local OwlHub = Instance.new("TextButton")
+local Frame_3 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Frame_4 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Name = "Stop Skidding!"
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.5, -62, 0.5, -117)
+Frame.Size = UDim2.new(0, 125, 0, 235)
+local UserInputService = game:GetService("UserInputService")
+
+local gui = Frame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+		
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+Frame_2.Name = "Frame"
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0, 0, 0, 30)
+Frame_2.Size = UDim2.new(0, 125, 0, 175)
+Frame_2.Image = "rbxassetid://3570695787"
+Frame_2.ScaleType = Enum.ScaleType.Slice
+Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_2.SliceScale = 0.150
+
+----------------------------------------------------
+
+local BIG = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Open = Instance.new("TextButton")
+
+BIG.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BIG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+BIG.Enabled = false
+BIG.ResetOnSpawn = false
+
+Frame.Name = "Frame"
+Frame.Parent = BIG
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0, 0, 0.885, -50)
+Frame.Size = UDim2.new(0, 100, 0, 50)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(54, 54, 54)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.150
+
+Open.Parent = Frame
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
+Open.BorderSizePixel = 0
+Open.Selectable = false
+Open.Size = UDim2.new(0, 100, 0, 50)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.MouseButton1Click:Connect(function()
+	ScreenGui.Enabled = true
+	BIG.Enabled = false
+end)
+
+----------------------------------------------------
+
+TextButton.Parent = Frame_2
+TextButton.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+TextButton.Position = UDim2.new(0, 47, 0, 4)
+TextButton.Size = UDim2.new(0, 30, 0, 3)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.TextTransparency = 1.000
+TextButton.MouseButton1Click:Connect(function()
+ScreenGui.Enabled = false
+BIG.Enabled = true
+end)
+
+ScrollingFrame.Parent = Frame_2
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 11, 0, 12.5)
+ScrollingFrame.Size = UDim2.new(0, 103, 0, 150)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.575, 0)
+ScrollingFrame.ScrollBarThickness = 0
+
+_1.Name = "1"
+_1.Parent = ScrollingFrame
+_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1.BackgroundTransparency = 1.000
+_1.Size = UDim2.new(0, 103, 0, 30)
+_1.Image = "rbxassetid://3570695787"
+_1.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_1.ScaleType = Enum.ScaleType.Slice
+_1.SliceCenter = Rect.new(100, 100, 100, 100)
+_1.SliceScale = 0.120
+
+FEHAX.Name = "FEHAX"
+FEHAX.Parent = _1
+FEHAX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FEHAX.BackgroundTransparency = 1.000
+FEHAX.Size = UDim2.new(0, 103, 0, 30)
+FEHAX.Font = Enum.Font.SourceSans
+FEHAX.Text = "FE HAX"
+FEHAX.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEHAX.TextScaled = true
+FEHAX.TextSize = 14.000
+FEHAX.TextWrapped = true
+FEHAX.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/aUTcyhXL'))()
+end)
+
+_2.Name = "2"
+_2.Parent = ScrollingFrame
+_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2.BackgroundTransparency = 1.000
+_2.Position = UDim2.new(0, 0, 0, 35)
+_2.Size = UDim2.new(0, 103, 0, 30)
+_2.Image = "rbxassetid://3570695787"
+_2.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_2.ScaleType = Enum.ScaleType.Slice
+_2.SliceCenter = Rect.new(100, 100, 100, 100)
+_2.SliceScale = 0.120
+
+BestGUI.Name = "BestGUI"
+BestGUI.Parent = _2
+BestGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BestGUI.BackgroundTransparency = 1.000
+BestGUI.Size = UDim2.new(0, 103, 0, 30)
+BestGUI.Font = Enum.Font.SourceSans
+BestGUI.Text = "GabX"
+BestGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+BestGUI.TextScaled = true
+BestGUI.TextSize = 14.000
+BestGUI.TextWrapped = true
+BestGUI.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/fmbL2Lfb'))()
+end)
+
+_4.Name = "4"
+_4.Parent = ScrollingFrame
+_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4.BackgroundTransparency = 1.000
+_4.Position = UDim2.new(0, 0, 0, 105)
+_4.Size = UDim2.new(0, 103, 0, 30)
+_4.Image = "rbxassetid://3570695787"
+_4.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_4.ScaleType = Enum.ScaleType.Slice
+_4.SliceCenter = Rect.new(100, 100, 100, 100)
+_4.SliceScale = 0.120
+
+PotatoHub.Name = "PotatoHub"
+PotatoHub.Parent = _4
+PotatoHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PotatoHub.BackgroundTransparency = 1.000
+PotatoHub.Size = UDim2.new(0, 103, 0, 30)
+PotatoHub.Font = Enum.Font.SourceSans
+PotatoHub.Text = "Potato Hub"
+PotatoHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+PotatoHub.TextScaled = true
+PotatoHub.TextSize = 14.000
+PotatoHub.TextWrapped = true
+PotatoHub.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet(('https://www.potato-hub.com/PotatoHub.lua'),true))()
+end)
+
+_3.Name = "3"
+_3.Parent = ScrollingFrame
+_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3.BackgroundTransparency = 1.000
+_3.Position = UDim2.new(0, 0, 0, 70)
+_3.Size = UDim2.new(0, 103, 0, 30)
+_3.Image = "rbxassetid://3570695787"
+_3.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_3.ScaleType = Enum.ScaleType.Slice
+_3.SliceCenter = Rect.new(100, 100, 100, 100)
+_3.SliceScale = 0.120
+
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = _3
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.BackgroundTransparency = 1.000
+InfiniteYield.Size = UDim2.new(0, 103, 0, 30)
+InfiniteYield.Font = Enum.Font.SourceSans
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.TextScaled = true
+InfiniteYield.TextSize = 14.000
+InfiniteYield.TextWrapped = true
+InfiniteYield.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+_5.Name = "5"
+_5.Parent = ScrollingFrame
+_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5.BackgroundTransparency = 1.000
+_5.Position = UDim2.new(0, 0, 0, 140)
+_5.Size = UDim2.new(0, 103, 0, 30)
+_5.Image = "rbxassetid://3570695787"
+_5.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_5.ScaleType = Enum.ScaleType.Slice
+_5.SliceCenter = Rect.new(100, 100, 100, 100)
+_5.SliceScale = 0.120
+
+AimBot.Name = "AimBot"
+AimBot.Parent = _5
+AimBot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AimBot.BackgroundTransparency = 1.000
+AimBot.Size = UDim2.new(0, 103, 0, 30)
+AimBot.Font = Enum.Font.SourceSans
+AimBot.Text = "AimBot"
+AimBot.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimBot.TextScaled = true
+AimBot.TextSize = 14.000
+AimBot.TextWrapped = true
+AimBot.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/2Q5ZcMJZ",true))()
+end)
+
+_6.Name = "6"
+_6.Parent = ScrollingFrame
+_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6.BackgroundTransparency = 1.000
+_6.Position = UDim2.new(0, 0, 0, 175)
+_6.Size = UDim2.new(0, 103, 0, 30)
+_6.Image = "rbxassetid://3570695787"
+_6.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_6.ScaleType = Enum.ScaleType.Slice
+_6.SliceCenter = Rect.new(100, 100, 100, 100)
+_6.SliceScale = 0.120
+
+FathomHub.Name = "FathomHub"
+FathomHub.Parent = _6
+FathomHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FathomHub.BackgroundTransparency = 1.000
+FathomHub.Size = UDim2.new(0, 103, 0, 30)
+FathomHub.Font = Enum.Font.SourceSans
+FathomHub.Text = "Fathom Hub"
+FathomHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+FathomHub.TextScaled = true
+FathomHub.TextSize = 14.000
+FathomHub.TextWrapped = true
+FathomHub.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+end)
+
+_7.Name = "7"
+_7.Parent = ScrollingFrame
+_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7.BackgroundTransparency = 1.000
+_7.Position = UDim2.new(0, 0, 0, 210)
+_7.Size = UDim2.new(0, 103, 0, 30)
+_7.Image = "rbxassetid://3570695787"
+_7.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_7.ScaleType = Enum.ScaleType.Slice
+_7.SliceCenter = Rect.new(100, 100, 100, 100)
+_7.SliceScale = 0.120
+
+FEAnimations.Name = "FEAnimations"
+FEAnimations.Parent = _7
+FEAnimations.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FEAnimations.BackgroundTransparency = 1.000
+FEAnimations.Size = UDim2.new(0, 103, 0, 30)
+FEAnimations.Font = Enum.Font.SourceSans
+FEAnimations.Text = "FE Animations"
+FEAnimations.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEAnimations.TextScaled = true
+FEAnimations.TextSize = 14.000
+FEAnimations.TextWrapped = true
+FEAnimations.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/kz1Et0kG'),true))()
+end)
+
+_8.Name = "8"
+_8.Parent = ScrollingFrame
+_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_8.BackgroundTransparency = 1.000
+_8.Position = UDim2.new(0, 0, 0, 245)
+_8.Size = UDim2.new(0, 103, 0, 30)
+_8.Image = "rbxassetid://3570695787"
+_8.ImageColor3 = Color3.fromRGB(54, 54, 54)
+_8.ScaleType = Enum.ScaleType.Slice
+_8.SliceCenter = Rect.new(100, 100, 100, 100)
+_8.SliceScale = 0.120
+
+OwlHub.Name = "OwlHub"
+OwlHub.Parent = _8
+OwlHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OwlHub.BackgroundTransparency = 1.000
+OwlHub.Size = UDim2.new(0, 103, 0, 30)
+OwlHub.Font = Enum.Font.SourceSans
+OwlHub.Text = "Owl Hub"
+OwlHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+OwlHub.TextScaled = true
+OwlHub.TextSize = 14.000
+OwlHub.TextWrapped = true
+OwlHub.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+Frame_3.Name = "Frame"
+Frame_3.Parent = Frame_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.Position = UDim2.new(0, 0, 0, -30)
+Frame_3.Size = UDim2.new(0, 125, 0, 30)
+Frame_3.Image = "rbxassetid://3570695787"
+Frame_3.ImageColor3 = Color3.fromRGB(54, 54, 54)
+Frame_3.ScaleType = Enum.ScaleType.Slice
+Frame_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_3.SliceScale = 0.120
+
+TextLabel.Parent = Frame_3
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 125, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Zoomy GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Frame_4.Name = "Frame"
+Frame_4.Parent = Frame_2
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.Position = UDim2.new(0, 0, 0, 175)
+Frame_4.Size = UDim2.new(0, 125, 0, 30)
+Frame_4.Image = "rbxassetid://3570695787"
+Frame_4.ImageColor3 = Color3.fromRGB(54, 54, 54)
+Frame_4.ScaleType = Enum.ScaleType.Slice
+Frame_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_4.SliceScale = 0.120
+
+TextLabel_2.Parent = Frame_4
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Size = UDim2.new(0, 125, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "By ZacBozer"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
