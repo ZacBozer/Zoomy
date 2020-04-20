@@ -340,7 +340,7 @@ FEAnimations.TextScaled = true
 FEAnimations.TextSize = 14.000
 FEAnimations.TextWrapped = true
 FEAnimations.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/3ycf3hiR"))();
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ZacBozer/Zoomy/master/network%20animations%20(trying%20to%20fix)!.txt',  true))()
 end)
 
 _8.Name = "8"
