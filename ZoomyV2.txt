@@ -340,7 +340,7 @@ FEAnimations.TextScaled = true
 FEAnimations.TextSize = 14.000
 FEAnimations.TextWrapped = true
 FEAnimations.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/3ycf3hiR"))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/3ycf3hiR"))();
 end)
 
 _8.Name = "8"
