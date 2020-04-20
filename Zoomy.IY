@@ -1,0 +1,16 @@
+local Plugin = {
+    ["PluginName"] = "Zoomy GUI--",
+    ["PluginDescription"] = "Gives you the Trash Zoomy Gui by ZacBozer",
+    ["Commands"] = {
+		["Zoomy"] = {
+			["ListName"] = "Zoomy / GUI",
+			["Description"] = "Gives you my trashy GUI",
+			["Aliases"] = {"GUI"},
+			["Function"] = function(args,speaker)
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/ZacBozer/Zoomy/master/ZoomyV2.txt'),true))()
+			end
+		}
+    }
+}
+
+return Plugin
